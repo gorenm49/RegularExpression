@@ -60,6 +60,22 @@ namespace UserRegistrationProgram
             {
                 System.Console.WriteLine("please enter valid contact number format!!");
             }
+
+            
+            Regex regPassword = new Regex("^[A-Za-z0-9]{8,}$");
+
+            System.Console.WriteLine("Enter password :");
+            string password = Console.ReadLine();
+            
+            if (regPassword.IsMatch(password))
+            {
+                System.Console.WriteLine("Your password is :"+password);
+            }
+            else
+            {
+                System.Console.WriteLine("please enter valid password format!!");
+            }
+
         }       
     }
 }
