@@ -7,6 +7,7 @@ namespace UserRegistrationProgram
     {
         public void UserRegistration()
         {
+
             Regex firstName = new Regex("^[A-Z]{1}[a-z]{3,14}$");
 
             System.Console.WriteLine("Enter Fisrt Name :");
@@ -33,8 +34,8 @@ namespace UserRegistrationProgram
                 System.Console.WriteLine("please enter valid last name!!");
             }
 
-            Regex regEmail1 = new Regex("^([a-zA-Z0-9.]{3,})?[@][a-zA-Z]{3,}[.][a-zA-Z]{2,3}[.][a-zA-Z]{2}?$");
-            Regex regEmail2 = new Regex("^([a-zA-Z0-9.]{3,})?[@][a-zA-Z]{3,}[.][a-zA-Z]{2,3}?$");
+            Regex regEmail1 = new Regex("^([a-zA-Z0-9.]{3,})?[@][a-zA-Z0-9]{1,}[.][a-zA-Z]{2,3}[.][a-zA-Z]{2,3}?$");
+            Regex regEmail2 = new Regex("^([.a-zA-Z0-9-+]{3,})?[@][a-zA-Z0-9]{1,}[.][a-zA-Z]{2,3}?$");
 
             System.Console.WriteLine("Enter Email id :");
             string email = Console.ReadLine();
@@ -63,7 +64,7 @@ namespace UserRegistrationProgram
 
             
             //Regex regPassword = new Regex("^(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[!@#%^&])[A-Za-z0-9]{8,}$");
-             Regex regPassword = new Regex("^(?=[a-zA-Z0-9#@$?]{8,}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9]).*");
+            Regex regPassword = new Regex("^(?=[a-zA-Z0-9#@$?]{8,}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9]).*");
             
             System.Console.WriteLine("Enter password :");
             string password = Console.ReadLine();
