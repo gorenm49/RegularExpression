@@ -62,8 +62,9 @@ namespace UserRegistrationProgram
             }
 
             
-            Regex regPassword = new Regex("^(?=.*?[A-Z])(?=.*?[0-9])[A-Za-z0-9]{8,}$");
-
+            //Regex regPassword = new Regex("^(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[!@#%^&])[A-Za-z0-9]{8,}$");
+             Regex regPassword = new Regex("^(?=[a-zA-Z0-9#@$?]{8,}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9]).*");
+            
             System.Console.WriteLine("Enter password :");
             string password = Console.ReadLine();
             
