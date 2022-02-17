@@ -46,6 +46,20 @@ namespace UserRegistrationProgram
             {
                 System.Console.WriteLine("please enter valid email id format!!");
             }
+
+            Regex regContact = new Regex("^[9]{1}[1]{1}[ ][6-9]{1}[0-9]{9}$");
+
+            System.Console.WriteLine("Enter Contact Number :");
+            string contact = (Console.ReadLine());
+            
+            if (regContact.IsMatch(contact))
+            {
+                System.Console.WriteLine("Your contact number is :"+contact);
+            }
+            else
+            {
+                System.Console.WriteLine("please enter valid contact number format!!");
+            }
         }
         
     }
