@@ -32,6 +32,20 @@ namespace UserRegistrationProgram
             {
                 System.Console.WriteLine("please enter valid last name!!");
             }
+
+            Regex regEmail1 = new Regex("^([a-zA-Z0-9.]{3,})?[@][a-zA-Z]{3,}[.][a-zA-Z]{2,3}[.][a-zA-Z]{2}?$");
+            Regex regEmail2 = new Regex("^([a-zA-Z0-9.]{3,})?[@][a-zA-Z]{3,}[.][a-zA-Z]{2,3}?$");
+
+            System.Console.WriteLine("Enter Email id :");
+            string email = Console.ReadLine();
+            if (regEmail1.IsMatch(email) || regEmail2.IsMatch(email))
+            {
+                System.Console.WriteLine("Your Email id is :"+email);
+            }
+            else
+            {
+                System.Console.WriteLine("please enter valid email id format!!");
+            }
         }
         
     }
