@@ -62,7 +62,7 @@ namespace UserRegistrationProgram
             }
 
             
-            Regex regPassword = new Regex("^[A-Za-z0-9]{8,}$");
+            Regex regPassword = new Regex("^(?=.*?[A-Z])[A-Za-z0-9]{8,}$");
 
             System.Console.WriteLine("Enter password :");
             string password = Console.ReadLine();
@@ -75,7 +75,6 @@ namespace UserRegistrationProgram
             {
                 System.Console.WriteLine("please enter valid password format!!");
             }
-
         }       
     }
 }
